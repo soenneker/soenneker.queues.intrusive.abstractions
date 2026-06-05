@@ -24,13 +24,5 @@ public abstract class IntrusiveNode<TNode> : IIntrusiveNode<TNode>
 {
     private TNode? _next;
 
-    /// <summary>
-    /// Gets a reference to the next node in the intrusive structure.
-    /// </summary>
-    /// <remarks>
-    /// This returns a reference to the underlying storage field to enable lock-free algorithms
-    /// to perform <see cref="System.Threading.Volatile"/> and <see cref="System.Threading.Interlocked"/>
-    /// operations directly on it.
-    /// </remarks>
     public ref TNode? Next => ref _next;
 }

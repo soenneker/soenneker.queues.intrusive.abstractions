@@ -1,13 +1,6 @@
 ﻿namespace Soenneker.Queues.Intrusive.Abstractions;
 
-/// <summary>
-/// Base class for nodes used in intrusive, singly-linked structures.
-///
-/// This class provides a storage-backed implementation of <see cref="IIntrusiveNode{TNode}"/>,
-/// exposing the required <see cref="Next"/> linkage via a ref-returning property.
-///
-/// Deriving from this class avoids having to manually implement the linkage in each node type.
-/// </summary>
+/// <inheritdoc cref="IIntrusiveNode{TNode}"/>
 /// <typeparam name="TNode">
 /// The concrete node type. This is typically the deriving type itself (self-referential generic constraint).
 /// </typeparam>
